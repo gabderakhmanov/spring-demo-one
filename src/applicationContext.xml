@@ -11,11 +11,15 @@
     <!-- Dependency here -->
     <bean id="myFortune" class="com.team.springdemo.service.HappyFortuneService"/>
     <bean id="myTimeTable" class="com.team.springdemo.service.HappyTimeTableService"/>
-    <bean id="myLearning" class="com.team.springdemo.learning.AlgebraLearning"/>
+    <bean id="myAlgebraLearning" class="com.team.springdemo.learning.AlgebraLearning"/>
+    <bean id="myLangLearning" class="com.team.springdemo.learning.LangLearning"/>
 
     <!-- Define your beans here -->
     <bean id="algebraTeacher" class="com.team.springdemo.teacher.AlgebraTeacher">
-        <constructor-arg ref="myLearning"/>
+        <constructor-arg ref="myAlgebraLearning"/>
+    </bean>
+    <bean id="langTeacher" class="com.team.springdemo.teacher.LangTeacher">
+        <property name="langLearning" ref="myLangLearning"/>
     </bean>
 
 	<bean id="myCoach" class="com.team.springdemo.coach.BaseballCoach">

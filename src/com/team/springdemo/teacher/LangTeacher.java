@@ -9,11 +9,20 @@ public class LangTeacher {
 
     private LangLearning langLearning;
 
+    private String langTeacherEmail;
+
+    public void setLangTeacherEmail(String langTeacherEmail) {
+        this.langTeacherEmail = langTeacherEmail;
+    }
+
     public void setLangLearning(LangLearning langLearning) {
         this.langLearning = langLearning;
     }
 
     public String getKnowledge(){
         return this.langLearning.getLangKnwldg();
+    }
+    public String getLangTeacherEmail(){
+        return langTeacherEmail;
     }
 }

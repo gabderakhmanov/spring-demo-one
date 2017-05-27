@@ -22,6 +22,7 @@ public class MyApp2 {
 
         LangTeacher theTeacher = context.getBean("langTeacher", LangTeacher.class);
         System.out.println(theTeacher.getKnowledge());
+        System.out.println(theTeacher.getLangTeacherEmail());
 
         context.close();
     }

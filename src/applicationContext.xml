@@ -20,6 +20,7 @@
     </bean>
     <bean id="langTeacher" class="com.team.springdemo.teacher.LangTeacher">
         <property name="langLearning" ref="myLangLearning"/>
+        <property name="langTeacherEmail" value="lang@teacher.com"/>
     </bean>
 
 	<bean id="myCoach" class="com.team.springdemo.coach.BaseballCoach">

@@ -8,6 +8,9 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 
+    <!-- Properties here -->
+    <context:property-placeholder location="classpath:teacher.properties"/>
+
     <!-- Dependency here -->
     <bean id="myFortune" class="com.team.springdemo.service.HappyFortuneService"/>
     <bean id="myTimeTable" class="com.team.springdemo.service.HappyTimeTableService"/>
@@ -20,7 +23,7 @@
     </bean>
     <bean id="langTeacher" class="com.team.springdemo.teacher.LangTeacher">
         <property name="langLearning" ref="myLangLearning"/>
-        <property name="langTeacherEmail" value="lang@teacher.com"/>
+        <property name="langTeacherEmail" value="${foo.email}"/>
     </bean>
 
 	<bean id="myCoach" class="com.team.springdemo.coach.BaseballCoach">

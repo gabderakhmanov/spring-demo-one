@@ -1,3 +1,5 @@
+package com.team.springdemo;
+
 import com.team.springdemo.teacher.ChemistryTeacher;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

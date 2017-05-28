@@ -1,6 +1,7 @@
 package com.team.springdemo;
 
 import com.team.springdemo.teacher.FrenchLangTeacher;
+import com.team.springdemo.teacher.RusLangTeacher;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -12,8 +13,11 @@ public class MyApp4 {
         ClassPathXmlApplicationContext context = new
                 ClassPathXmlApplicationContext("beanAnnotation-applicationContext.xml");
 
-        FrenchLangTeacher theTeacher = context.getBean("myFrenchTeacher", FrenchLangTeacher.class);
-        System.out.println(theTeacher.getSomeNewWords());
+        //FrenchLangTeacher theFrenchTeacher = context.getBean("myFrenchTeacher", FrenchLangTeacher.class);
+        //System.out.println(theFrenchTeacher.getSomeNewWords());
+
+        RusLangTeacher rusLangTeacher = context.getBean("rusLangTeacher", RusLangTeacher.class);
+        System.out.println(rusLangTeacher.getSomeNewWord());
     }
 
 }
